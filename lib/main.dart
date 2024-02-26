@@ -1,3 +1,4 @@
+import 'package:data_flutter_lib/button/custom_text_buuton.dart';
 import 'package:data_flutter_lib/text_field/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -49,15 +50,24 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AppTextFormField(hintText: 'Enter your text'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: AppTextButton(
+                    buttonText: 'Click here',
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                    onPressed: () {}),
+              )
             ],
           ),
         ),
